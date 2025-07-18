@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 
 # Load the data set 
-ipl=pd.read_csv("C:\\Users\\MEGH BAVARVA\\Desktop\\Data Scientist\\Project\\API_development\\Code\\IPL_Matches_2008_2022.csv")
-balls=pd.read_csv("C:\\Users\\MEGH BAVARVA\\Desktop\\Data Scientist\\Project\\API_development\\Code\\IPL_Ball_by_Ball_2008_2022.csv")
-deliveries=pd.read_csv("C:\\Users\\MEGH BAVARVA\\Desktop\\Data Scientist\\Project\\API_development\\Code\\ipl_deliveries.csv")
+ipl=pd.read_csv("C:\\Users\\MEGH BAVARVA\\Desktop\\Data Scientist\\Project\\API_development\\Flask_App_IPL\\IPL_Matches_2008_2022.csv")
+balls=pd.read_csv("C:\\Users\\MEGH BAVARVA\\Desktop\\Data Scientist\\Project\\API_development\\Flask_App_IPL\\IPL_Ball_by_Ball_2008_2022.csv")
+deliveries=pd.read_csv("C:\\Users\\MEGH BAVARVA\\Desktop\\Data Scientist\\Project\\API_development\\Flask_App_IPL\\ipl_deliveries.csv")
 
 
 # change neccesaary thing in data sets
