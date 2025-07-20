@@ -1,210 +1,140 @@
-IPL Flask API
+Sure Megh! Below is your complete, **beautifully formatted and simple** `README.md` file content. You can **copy-paste** it directly into your project as `README.md`.
 
-A RESTful API built with Flask to serve comprehensive IPL (Indian Premier League) statistics from 2008 to 2022. This project demonstrates clean architecture, efficient data processing with Pandas, and deployment-ready configurations.
+---
 
-🔍 Key Features
+```markdown
+# 🏏 IPL Flask API
 
-Team Endpoints: Retrieve list of all IPL teams.
+This is a simple and powerful **Flask-based REST API** that gives detailed stats about the Indian Premier League (IPL) from 2008 to 2022. It uses **Python, Pandas, and Flask** to serve IPL data like team records, player stats, points tables, and much more.
 
-Head-to-Head: Compare two teams' performance against each other.
+---
 
-Winning Records: Overall winning percentages and most finals played.
+## 🔥 Key Features
 
-Player Statistics: Season-wise batsman and bowler details.
+- Get all IPL teams
+- Compare any two teams head-to-head
+- See which captains played the most finals
+- Player-wise stats season-by-season
+- Purple Cap and Orange Cap winners
+- Points table by season
+- Highest batting partnerships
+- Fully working REST API ready to deploy!
 
-Caps: Purple Cap (most wickets) and Orange Cap (most runs) winners.
+---
 
-Point Table: Standings by season with Net Run Rate (NRR).
+## 📁 Project Structure
 
-Partnerships & Player of the Match: Top batting pairs and standout players.
+```
 
-📁 Project Structure
-
-ipl_flask_api/
+ipl\_flask\_api/
 ├── data/
-│   ├── IPL_Matches_2008_2022.csv    # Match-level data
-│   ├── IPL_Ball_by_Ball_2008_2022.csv  # Ball-by-ball data
-│   └── ipl_deliveries.csv            # Cleaned deliveries dataset
-├── Testing.ipynb                    # Exploratory data analysis & prototyping
-├── backend.py                       # Flask application & route definitions
-├── ipl.py                           # Data loading and processing functions
-├── requirements.txt                 # Python dependencies
-└── Procfile                         # Deployment config for Render.com
+│   ├── IPL\_Matches\_2008\_2022.csv
+│   ├── IPL\_Ball\_by\_Ball\_2008\_2022.csv
+│   └── ipl\_deliveries.csv
+├── backend.py            # Main Flask app and API routes
+├── ipl.py                # All IPL data functions using Pandas
+├── Testing.ipynb         # Used for testing and experimenting
+├── requirements.txt      # List of required Python libraries
+├── Procfile              # For deployment (e.g. Render.com)
+└── README.md             # This file
 
-⚙️ Prerequisites
+````
 
-Python 3.7+
+---
 
-pip
+## ⚙️ Setup Instructions
 
-🚀 Installation & Setup
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/MeghOffical/ipl_flask_api.git
+   cd ipl_flask_api
+````
 
-Clone the repository
+2. **Create a virtual environment (optional but recommended)**
 
-git clone https://github.com/MeghOffical/ipl_flask_api.git
-cd ipl_flask_api
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate   # Windows
+   source venv/bin/activate  # Mac/Linux
+   ```
 
-Install dependencies
+3. **Install all requirements**
 
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Run locally
+4. **Run the Flask app**
 
-export FLASK_APP=backend.py
-flask run
+   ```bash
+   set FLASK_APP=backend.py    # Windows
+   export FLASK_APP=backend.py # Mac/Linux
+   flask run
+   ```
 
-Deploy on Render
+5. **Visit in browser:**
+   [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-Create a new Web Service on Render.
+---
 
-Connect your GitHub repo.
+## 🔗 API Endpoints
 
-Use the included Procfile (web: gunicorn backend:app).
+| URL                                        | Description                      |
+| ------------------------------------------ | -------------------------------- |
+| `/`                                        | Home route / Welcome message     |
+| `/api/teams`                               | List of all IPL teams            |
+| `/api/teamVteam?team1=CSK&team2=MI`        | Compare two teams head-to-head   |
+| `/api/team_winning_record`                 | Overall win % of all teams       |
+| `/api/most_final_played`                   | Captains with most finals played |
+| `/api/name_of_batsmens`                    | List of all batsmen              |
+| `/api/name_of_bowlers`                     | List of all bowlers              |
+| `/api/batsman_details?batsman=Virat Kohli` | Batsman’s season stats           |
+| `/api/bowler_details?bowler=J Bumrah`      | Bowler’s season stats            |
+| `/api/purple_cap`                          | Top wicket takers per season     |
+| `/api/orange_cap`                          | Top run scorers per season       |
+| `/api/point_table?season=2020`             | Points table for a given season  |
+| `/api/Player_Of_Match`                     | Most Player of the Match winners |
+| `/api/batting_pair`                        | Top batting partnerships         |
 
-🔗 API Reference
 
-Endpoint
+---
 
-Method
 
-Query Params
+## ☁️ Deploy on Render (Free Hosting)
 
-Description
+1. Push your project to GitHub
+2. Go to [https://render.com](https://render.com)
+3. Create a new Web Service and connect your repo
+4. Set **Build Command**: `pip install -r requirements.txt`
+5. Set **Start Command**: `gunicorn backend:app`
+6. Click Deploy 🎉
 
-/
+---
 
-GET
+## 💡 Future Improvements
 
-—
+* Add player vs player comparisons
+* Add live match prediction using ML
+* Add frontend with charts using React.js or Streamlit
+* Add rate limiting and API keys for public use
 
-Welcome message
+---
 
-/api/teams
 
-GET
+## 📝 License
 
-—
+This project is open source — use it freely.
 
-List of all IPL teams
+---
 
-/api/teamVteam
+*Built with ❤️ using Python, Pandas, and Flask.*
 
-GET
+---
 
-team1, team2
+## 🙋 About Me
 
-Head-to-head stats
+Hi, I'm **Megh Bavarva**, the creator of this project!
+This was built as a personal project to learn API design, Flask, and Pandas while exploring IPL data.
+Feel free to fork it, star it, or reach out for collaboration!
 
-/api/team_winning_record
-
-GET
-
-—
-
-Winning percentages for each team
-
-/api/most_final_played
-
-GET
-
-—
-
-Players with most finals appearances
-
-/api/name_of_bowlers
-
-GET
-
-—
-
-List of all bowlers
-
-/api/name_of_batsmens
-
-GET
-
-—
-
-List of all batsmen
-
-/api/bowler_details
-
-GET
-
-bowler
-
-Season-wise stats for a specific bowler
-
-/api/batsman_details
-
-GET
-
-batsman
-
-Season-wise stats for a specific batsman
-
-/api/purple_cap
-
-GET
-
-—
-
-Purple Cap winners (highest wickets per season)
-
-/api/orange_cap
-
-GET
-
-—
-
-Orange Cap winners (highest runs per season)
-
-/api/point_table
-
-GET
-
-season (e.g. 2023)
-
-Points table with NRR for specified season
-
-/api/Player_Of_Match
-
-GET
-
-—
-
-Player of the match counts
-
-/api/batting_pair
-
-GET
-
-—
-
-Top batting partnerships by cumulative runs
-
-🛠️ Under the Hood
-
-Data Loading: Uses Pandas to read CSVs.
-Normalization: Standardizes team names via mapping.
-Merging: Combines match and ball-level data for advanced metrics.
-Feature Engineering:
-Flags for legal deliveries and bowler dismissals.
-Excludes extras like byes and leg-byes from bowler runs.
-Stat Functions: GroupBy operations to compute per-season and overall statistics.
-
-
-🎯 Talking Points
-
-Modular Design: Separation of backend.py (API layer) and ipl.py (analytics layer).
-Pandas Expertise: Efficient use of groupby, merge, and custom flags on ~300K rows.
-Scalability: Discuss caching, pagination, or database-backed enhancements.
-Deployment: Zero-downtime free hosting with Render and Gunicorn.
-
-
-📄 License
-
-This project is open-source.
-
-
-For questions or feedback, feel free to open an issue or submit a pull request!
+🔗 GitHub: [@MeghOffical](https://github.com/MeghOffical)
