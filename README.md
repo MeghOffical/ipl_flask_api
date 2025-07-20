@@ -43,8 +43,7 @@ ipl\_flask\_api/
 1. **Clone the repo**
    ```bash
    git clone https://github.com/MeghOffical/ipl_flask_api.git
-   cd ipl_flask_api
-````
+   cd ipl_flask_api```
 
 2. **Create a virtual environment (optional but recommended)**
 
