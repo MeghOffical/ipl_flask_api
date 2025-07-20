@@ -110,7 +110,7 @@ ipl\_flask\_api/
 
 * Add player vs player comparisons
 * Add live match prediction using ML
-* Add frontend with charts using React.js or Streamlit
+* Add frontend with charts using  Streamlit
 * Add rate limiting and API keys for public use
 
 ---
@@ -119,10 +119,6 @@ ipl\_flask\_api/
 ## 📝 License
 
 This project is open source — use it freely.
-
----
-
-*Built with ❤️ using Python, Pandas, and Flask.*
 
 ---
 
