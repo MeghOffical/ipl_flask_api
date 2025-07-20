@@ -1,8 +1,4 @@
-Sure Megh! Below is your complete, **beautifully formatted and simple** `README.md` file content. You can **copy-paste** it directly into your project as `README.md`.
 
----
-
-```markdown
 # 🏏 IPL Flask API
 
 This is a simple and powerful **Flask-based REST API** that gives detailed stats about the Indian Premier League (IPL) from 2008 to 2022. It uses **Python, Pandas, and Flask** to serve IPL data like team records, player stats, points tables, and much more.
